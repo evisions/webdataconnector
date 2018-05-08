@@ -5,8 +5,8 @@ layout: docs
 
 `This content isn't finished yet: Coming soon`
 
-This topic is part of a multi-part tutorial on how to use OAuth with a
-Tableau web data connector. Here is a list of all the parts:
+This topic is part of a multi-part tutorial on how to use OAuth with a web data connector.
+Here is a list of all the parts:
 
 1. **Introduction and Overview** (you are here)
 2. [Create a Foursquare App](wdc_tutorial_oauth_client_create_app.html)

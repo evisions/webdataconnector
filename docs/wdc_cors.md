@@ -25,7 +25,7 @@ another site, you can try the approaches listed in this topic:
 {:toc}
 
 **Note**: For information about how to use the Web Data Connector
-simulator to help debug errors, including CORS errors, see [Debugging in the Simulator and Tableau]({{ site.baseurl
+simulator to help debug errors, including CORS errors, see [Debugging in the Simulator and MAPS]({{ site.baseurl
 }}/docs/wdc_debugging).
 
 Make requests through a proxy server {#proxy-server}

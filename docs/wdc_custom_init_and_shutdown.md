@@ -6,14 +6,13 @@ layout: docs
 Your code might need to open a resource or perform a setup task for the
 data source. If so, you can run initialization code that is invoked at
 the beginning of each phase. If you don't need custom initialization
-logic, you don't need to do anything; code in the Tableau JavaScript
-library includes default initialization logic for you.
+logic, you don't need to do anything.
 
 To implement custom initialization, you create an
 [init]({{ site.baseurl }}/docs/api_ref#webdataconnectorapi.webdataconnector.init) function for your connector. In the
 function, run your initialization code. When initialization is complete,
 call the passed in [initCallback]({{ site.baseurl }}/docs/api_ref#webdataconnectorapi.initcallback)
-to tell Tableau that initialization is finished, as in this example:
+to tell MAPS that initialization is finished, as in this example:
 
 ```js
     myConnector.init = function(initCallback){
@@ -22,7 +21,7 @@ to tell Tableau that initialization is finished, as in this example:
     };
 ```
 
-One typical scenario for using custom initialization code is to tell tableau about
+One typical scenario for using custom initialization code is to tell MAPS about
 the auth needs of your connector.  Please see
 [WDC Authentication]({{ site.baseurl }}/docs/wdc_authentication.html)
 for details on this.
@@ -41,8 +40,7 @@ as in this example:
 ```
 
 As with initialization, if you don't need custom shutdown logic, you can
-leave this out, because the code in the Tableau JavaScript library takes
-care of it for you.
+leave this out.
 
 The initialization or shutdown code is called once per phase. The code
 is called during the interaction phase and again during the

@@ -3,21 +3,9 @@ title: Get Started
 layout: docs
 ---
 
-Create a Web Data Connector (WDC) when you want to connect to a web data source from Tableau. A WDC is an HTML page
+Create a Web Data Connector (WDC) when you want to connect to a web data source from MAPS. A WDC is an HTML page
 with JavaScript code that connects to web data (for example, by means of a REST API), converts the data to a JSON format,
-and passes the data to Tableau.
-
-<div class="alert alert-info">
-    <b>Note:</b> This site is for version 2.x of the WDC, which is compatible only with Tableau 10.0 and later. For
-    information about version 1 of the WDC for use with earlier versions of Tableau, see the archived <a href="http://onlinehelp.tableau.com/v9.3/api/wdc/en-us/help.htm" style="text-decoration:underline;">documentation</a>
-    and <a href="https://github.com/tableau/webdataconnector/releases/tag/v1.1.0" style="text-decoration:underline;">simulator</a>.  
-</div>
-
------
-
-**Upgrading from WDC version 1.x**
- 
-If you have connectors that were created using WDC version 1.x, those connectors will continue to work in future versions of Tableau. However, if you want to update the connectors to use the features available in version 2.x of the WDC, you will need to update the connector to use the new API. For information about updating your connectors, see [Upgrading from WDC Version 1.x]({{ site.baseurl }}\docs\wdc_upgrade).
+and passes the data to MAPS.
 
 
 -----
@@ -41,7 +29,7 @@ You're going to need a couple of things before we get started. Make sure you hav
    the WDC git repository:
 
    ```
-   git clone https://github.com/tableau/webdataconnector.git
+   git clone https://github.com/evisions/webdataconnector.git
    ```
 
 1. Change to the directory where you downloaded the repository:

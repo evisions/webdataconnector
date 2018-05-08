@@ -1,7 +1,6 @@
 # Site settings
-title: Tableau Web Data Connector
-email: jdominguez@tableau.com
-description: Connect to your web data from Tableau.
+title: Web Data Connector
+description: Connect to your web data from MAPS.
 baseurl: "/webdataconnector"
 # permalink: pretty
 defaults:

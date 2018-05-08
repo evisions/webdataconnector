@@ -22,11 +22,11 @@ If you *really* want to skip all of this and go straight to the source code, loo
 connector in the `Examples` directory (`earthquakeUSGS`). This is to minimize the chances of accidentally overwriting
 the existing sample. However, if you copy the existing sample, you'll have to change file paths.
 
-**Note**: The browser used inside Tableau is QT WebKit, which does not natively support new ES6 features.  If you wish to take advantage of newer features (such as promises) when building WDCs you will need to use a polyfill.
+**Note**: The browser used inside MAPS does not natively support new ES6 features.  If you wish to take advantage of newer features (such as promises) when building WDCs you will need to use a polyfill.
 
 ### Create the HTML page
 
-When you open a WDC in Tableau, you display an HTML page that links to your JavaScript code and to the WDC library.
+When you open a WDC in MAPS, you display an HTML page that links to your JavaScript code and to the WDC library.
 Optionally, this page can also display a user interface for your users to select the data that they want to download.
 
 Create a new file named `earthquakeWDC.html` and save it in the top-level directory of the `webdataconnector`
@@ -130,7 +130,7 @@ Here's what is going on in the code snippet:
   id.
 * The `tableau.connectionName` variable defines what we want to call the connector data source when it is displayed in
   Tableau.
-* The `tableau.submit()` function sends the connector object to Tableau for validation.
+* The `tableau.submit()` function sends the connector object to MAPS for validation.
 
 **Tip**: Not every connector needs a user interface. If you want a connector to run without user input, you can use
 custom initialization code. For more information, see [Custom Initialization and Shutdown]({{ site.baseurl
@@ -188,7 +188,7 @@ If all goes well, you should see `Hello WDC!` in your browser's console.
 
 ### Define a schema
 
-So the connector is working now--sort of. Before you can download data and pass it to Tableau, you need to define how
+So the connector is working now--sort of. Before you can download data and pass it to MAPS, you need to define how
 you want to map the data to one or more or tables. This mapping of data is done in the schema.
 
 To decide what data you want to map in the schema, you can take a look at the USGS description of the JSON data source:
@@ -231,7 +231,7 @@ Here's what's going on in the code:
 * The `getSchema` function takes a `schemaCallback` parameter which is defined by the WDC API.
 * The `cols` variable contains an array of JavaScript objects, where each object defines a single column in our table.
   In this example, there are columns for magnitude, title, and location. Note that for each column you can
-  specify additional options. For example, the alias defines a friendly name that can appear in Tableau and the
+  specify additional options. For example, the alias defines a friendly name that can appear in MAPS/Argos and the
   columnRole determines whether a field is a measure or a dimension. The `id` can only contain alphanumeric values (a-z, A-Z, 0-9) and underscore characters (`_`). The identifiers cannot contain spaces, hyphens, or special characters. For more options, see [the API reference]({{
       site.baseurl }}/docs/api_ref.html#webdataconnectorapi.columninfo){:target="_blank"}.
 * The `tableSchema` variable defines the schema for a single table and contains a JavaScript object. Here, the value of
@@ -245,7 +245,7 @@ part--getting the data!
 
 ### Get the data
 
-Once the schema is defined, you can begin getting data and passing it to Tableau.
+Once the schema is defined, you can begin getting data and passing it to MAPS.
 
 Copy the following code and replace the placeholder `getData` function:
 
@@ -292,7 +292,7 @@ The moment you've been waiting for is here! Click **Fetch Table Data** to run yo
 
 > **Note** The location information for an earthquake is returned as a JSON object, which is why you might see `object Object` displayed in the simulator. Tableau 10.4 added support for geoJSON data, so while the simulator only knows you have some kind of JSON object, Tableau will have no trouble parsing the coordinates from the geometry data.
 
-To really see things working, [open your connector in Tableau](http://tableau.github.io/webdataconnector/docs/wdc_use_in_tableau):
+To really see things working, [open your connector in MAPS](http://evisions.github.io/webdataconnector/docs/wdc_use_in_maps):
 
 !["The earthquake data is displayed on a map in Tableau."]({{ site.baseurl }}/assets/wdc_tableau_earthquake_geo_json.png)
 

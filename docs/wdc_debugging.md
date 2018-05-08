@@ -1,18 +1,16 @@
 ---
-title: Debugging in the Simulator and Tableau
+title: Debugging in the Simulator
 layout: docs
 ---
 
 You can use the simulator included with the WDC SDK to develop and debug your connectors more quickly. The simulator
-is a JavaScript application that loads connectors in a similar way to Tableau Desktop. Additionally, Tableau
-Desktop includes a built-in (although not supported) debugger that you can use to debug issues that appear in Tableau Desktop
-but not in the simulator.
+is a JavaScript application that loads connectors in a similar way to MAPS.
 
 Use the simulator when you are developing your connector, to set breakpoints in the browser, view network requests, and
-more. Use Tableau Desktop periodically during development to confirm that your connector works the same as in the
+more. Use MAPS periodically during development to confirm that your connector works the same as in the
 simulator, and then to perform your final testing.
 
-This page includes information about developing and debugging your connectors both in the simulator and in Tableau.
+This page includes information about developing and debugging your connectors in the simulator.
 
 * TOC
 {:toc}
@@ -88,54 +86,3 @@ connector. Here are some ways to work around caching issues:
     tools are open, code execution stops at breakpoints or `debugger` statements and you can examine variables.  For an
     overview of debugging tools, see [JavaScript Debugging](http://www.w3schools.com/js/js_debugging.asp) on the
     W3CSchools.com site.
-
-## Debugging in Tableau Desktop {#debugging-tableau}
-
-Tableau Desktop includes a built-in debugger that you can use to test your connectors. Use the built-in debugger when
-you encounter differences that you cannot debug in the simulator.
-
-**Important**:
-
-* The built-in debugger only runs on Windows.
-* It is provided as-is and without official support by Tableau.
-* The debugger communicates with Tableau Desktop  synchronously and therefore might appear unresponsive at times.
-
-To run the built-in debugger, complete the following steps:
-
-1. Open a command prompt.
-
-1. Navigate to the Tableau Desktop directory.
-
-   ```
-   cd "C:\Program Files\Tableau\Tableau <version>\bin\"
-   ```
-
-1. Run Tableau Desktop with the debugging flag:
-
-   ```
-   tableau.exe -DDebugWDC
-   ```
-
-1. Connect to a web data connector.
-
-1. Interact with your connector and start the data gathering phase.
-
-   The built-in debugger loads.
-
-1. The first time that you use the debugger, click the **Sources** tab, select **Always enable**, and click **Enable
-   Debugging**.
-
-   ![Enable debugging on the Sources tab.]({{ site.baseurl }}/assets/debugger_enable.png)
-
-1. Click the **Show sources** button to display a list of the files used in your connector.
-
-   ![View source files.]({{ site.baseurl }}/assets/debugger_show_sources.png)
-
-1. Select a file to open it.
-
-1. To set a breakpoint, click on a line number.
-
-1. Press F8 to continue running your connector.
-
-   ![Use breakpoints to debug your connector.]({{ site.baseurl }}/assets/debugger_breakpoint.png)
-

@@ -3,10 +3,10 @@ title: WDC Lifecycle and Phases
 layout: docs
 ---
 
-This document explains the overall lifecycle  of a Tableau Web Data Connector. It is recommended that you understand the
+This document explains the overall lifecycle  of a Web Data Connector. It is recommended that you understand the
 material from the Get Started section before diving into this material.
 
-A WDC is always run with an associated phase.  Tableau loads
+A WDC is always run with an associated phase.  MAPS loads
 the connector inside a web browser at different times and in distinct phases.
 This document will explain each of these phases and when each one runs.
 
@@ -29,8 +29,7 @@ of these events take place at the end of each phase as well (they mirror
 Interactive phase: Interact with the user {#phase-one}
 --------------------------------------------------
 
-- Tableau launches the web data connector in the interactive phase.  This
-    could be Tableau Desktop, or the Simulator.
+- MAPS or the Simulator launches the web data connector in the interactive phase.
 
     In the interactive phase, the following actions occur:
 

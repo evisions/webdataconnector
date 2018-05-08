@@ -1,7 +1,7 @@
 {
   "name": "webdataconnector",
   "version": "2.0.0",
-  "description": "Connect to web data from Tableau.",
+  "description": "Connect to web data from MAPS.",
   "scripts": {
     "corsproxy": "export CORSPROXY_PORT=8889 || set CORSPROXY_PORT=8889 && node node_modules/corsproxy/bin/corsproxy",
     "http-server": "node node_modules/http-server/bin/http-server -p 8888 -c-1",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tableau/webdataconnector.git"
+    "url": "git+https://github.com/evisions/webdataconnector.git"
   },
   "author": "",
   "license": "MIT",
